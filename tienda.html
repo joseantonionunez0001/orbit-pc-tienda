@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda · ORBIT PC</title>
+  <meta name="description" content="Encuentra tu equipo: portátiles, sobremesas y todo en uno en una misma tienda.">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="index.html" aria-label="ORBIT PC, ir al inicio">
+        <img src="img/logo.svg" width="180" height="40" alt="ORBIT PC">
+        <span class="logo__tagline">Tecnología para tu mundo</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="nav-toggle__barras" aria-hidden="true"></span>
+        <span class="sr-only">Abrir menú</span>
+      </button>
+      <nav class="main-nav" id="menu-principal" aria-label="Navegación principal">
+        <ul class="main-nav__list">
+          <li><a class="main-nav__link" href="index.html">Inicio</a></li>
+          <li><a class="main-nav__link" href="tienda.html" aria-current="page">Tienda</a></li>
+          <li><a class="main-nav__link" href="soporte.html">Soporte</a></li>
+          <li><a class="main-nav__link" href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <header class="container page-intro">
+      <h1 class="page-intro__title">Encuentra tu equipo</h1>
+      <p class="page-intro__lead">Nueve opciones para necesidades diferentes: tres portátiles, tres sobremesas y tres todo en uno.</p>
+    </header>
+
+    <section class="container" aria-label="Filtros del listado">
+      <div class="toolbar">
+        <div class="toolbar__filtros" role="group" aria-label="Filtrar por tipo de equipo">
+          <button class="filtro is-active" type="button" data-filtro="todos" aria-pressed="true">Todos</button>
+          <button class="filtro" type="button" data-filtro="portatil" aria-pressed="false">Portátiles</button>
+          <button class="filtro" type="button" data-filtro="sobremesa" aria-pressed="false">Sobremesa</button>
+          <button class="filtro" type="button" data-filtro="todo-en-uno" aria-pressed="false">Todo en uno</button>
+        </div>
+        <label class="toolbar__orden">
+          <span class="toolbar__orden-texto">Ordenar</span>
+          <select class="form-control toolbar__select" id="orden-productos">
+            <option value="destacados">Destacados</option>
+            <option value="precio-asc">Precio: de menor a mayor</option>
+            <option value="precio-desc">Precio: de mayor a menor</option>
+          </select>
+        </label>
+      </div>
+      <p class="toolbar__resultado" id="resultado-filtro" role="status" aria-live="polite">Mostrando 9 de 9 equipos</p>
+    </section>
+
+    <section class="container" id="listado" aria-label="Listado de productos">
+      <div class="product-grid">
+        <article class="product-card" data-categoria="portatil" data-precio="1299" data-orden="0">
+          <div class="product-card__media">
+            <img src="img/tienda/portatil1.gif" width="660" height="435" alt="">
+          </div>
+          <div class="product-card__body">
+            <p class="eyebrow">Portátil</p>
+            <h2 class="product-card__title">ASUS ZenBook</h2>
+            <p class="product-card__text">Diseño ultrafino con pantalla amplia</p>
+            <ul class="product-card__specs">
+              <li class="chip">Diseño ultrafino</li>
+              <li class="chip">Pantalla amplia</li>
+              <li class="chip">Teclado retroiluminado</li>
+            </ul>
+            <div class="product-card__footer">
+              <p class="product-card__price"><span class="product-card__from">Desde</span>1.299 €</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-categoria="sobremesa" data-precio="1499" data-orden="1">
+          <div class="product-card__media">
+            <img src="img/tienda/sobremesa%201.jpg" width="554" height="554" alt="">
+          </div>
+          <div class="product-card__body">
+            <p class="eyebrow">Sobremesa</p>
+            <h2 class="product-card__title">ABYSM Gaming</h2>
+            <p class="product-card__text">Potencia para jugar y crear</p>
+            <ul class="product-card__specs">
+              <li class="chip">GeForce RTX</li>
+              <li class="chip">Torre con cristal</li>
+              <li class="chip">Iluminación RGB</li>
+            </ul>
+            <div class="product-card__footer">
+              <p class="product-card__price"><span class="product-card__from">Desde</span>1.499 €</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-categoria="todo-en-uno" data-precio="999" data-orden="2">
+          <div class="product-card__media">
+            <img src="img/tienda/todoenuno1.webp" width="412" height="462" alt="">
+          </div>
+          <div class="product-card__body">
+            <p class="eyebrow">Todo en uno</p>
+            <h2 class="product-card__title">Lenovo All-in-One</h2>
+            <p class="product-card__text">Todo integrado en un solo equipo</p>
+            <ul class="product-card__specs">
+              <li class="chip">Diseño compacto</li>
+              <li class="chip">Pantalla grande</li>
+              <li class="chip">Sin cables a la vista</li>
+            </ul>
+            <div class="product-card__footer">
+              <p class="product-card__price"><span class="product-card__from">Desde</span>999 €</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-categoria="portatil" data-precio="1199" data-orden="3">
+          <div class="product-card__media">
+            <img src="img/tienda/portatil2.avif" alt="">
+          </div>
+          <div class="product-card__body">
+            <p class="eyebrow">Portátil</p>
+            <h2 class="product-card__title">Lenovo Yoga</h2>
+            <p class="product-card__text">Portátil y tablet en un solo equipo</p>
+            <ul class="product-card__specs">
+              <li class="chip">Pantalla táctil</li>
+              <li class="chip">Giro de 360°</li>
+              <li class="chip">Diseño metálico</li>
+            </ul>
+            <div class="product-card__footer">
+              <p class="product-card__price"><span class="product-card__from">Desde</span>1.199 €</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-categoria="sobremesa" data-precio="1699" data-orden="4">
+          <div class="product-card__media">
+            <img src="img/tienda/sobremesa2.jpg" width="554" height="554" alt="">
+          </div>
+          <div class="product-card__body">
+            <p class="eyebrow">Sobremesa</p>
+            <h2 class="product-card__title">Epical-Q Gaming</h2>
+            <p class="product-card__text">Rendimiento para juegos y edición</p>
+            <ul class="product-card__specs">
+              <li class="chip">GeForce RTX</li>
+              <li class="chip">Torre con cristal</li>
+              <li class="chip">Refrigeración líquida</li>
+            </ul>
+            <div class="product-card__footer">
+              <p class="product-card__price"><span class="product-card__from">Desde</span>1.699 €</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-categoria="todo-en-uno" data-precio="1149" data-orden="5">
+          <div class="product-card__media">
+            <img src="img/tienda/todoenuno2.webp" width="412" height="452" alt="">
+          </div>
+          <div class="product-card__body">
+            <p class="eyebrow">Todo en uno</p>
+            <h2 class="product-card__title">HP All-in-One</h2>
+            <p class="product-card__text">Pantalla limpia y teclado inalámbrico</p>
+            <ul class="product-card__specs">
+              <li class="chip">Diseño compacto</li>
+              <li class="chip">Pantalla grande</li>
+              <li class="chip">Teclado y ratón</li>
+            </ul>
+            <div class="product-card__footer">
+              <p class="product-card__price"><span class="product-card__from">Desde</span>1.149 €</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-categoria="portatil" data-precio="1199" data-orden="6">
+          <div class="product-card__media">
+            <img src="img/tienda/portatil3.jpg" width="1200" height="800" alt="">
+          </div>
+          <div class="product-card__body">
+            <p class="eyebrow">Portátil</p>
+            <h2 class="product-card__title">MacBook Air 13,6″</h2>
+            <p class="product-card__text">Ligero para estudiar y trabajar</p>
+            <ul class="product-card__specs">
+              <li class="chip">13,6″</li>
+              <li class="chip">1,24 kg</li>
+              <li class="chip">Diseño ultrafino</li>
+            </ul>
+            <div class="product-card__footer">
+              <p class="product-card__price"><span class="product-card__from">Desde</span>1.199 €</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-categoria="sobremesa" data-precio="1899" data-orden="7">
+          <div class="product-card__media">
+            <img src="img/tienda/Sobremesa3.webp" width="800" height="800" alt="">
+          </div>
+          <div class="product-card__body">
+            <p class="eyebrow">Sobremesa</p>
+            <h2 class="product-card__title">MSI Gaming</h2>
+            <p class="product-card__text">Torre con cristal y gran ventilación</p>
+            <ul class="product-card__specs">
+              <li class="chip">GeForce RTX</li>
+              <li class="chip">Torre con cristal</li>
+              <li class="chip">Iluminación RGB</li>
+            </ul>
+            <div class="product-card__footer">
+              <p class="product-card__price"><span class="product-card__from">Desde</span>1.899 €</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-categoria="todo-en-uno" data-precio="1349" data-orden="8">
+          <div class="product-card__media">
+            <img src="img/tienda/todoenuno3.webp" width="412" height="416" alt="">
+          </div>
+          <div class="product-card__body">
+            <p class="eyebrow">Todo en uno</p>
+            <h2 class="product-card__title">Lenovo IdeaCentre 27″</h2>
+            <p class="product-card__text">Pantalla de 27 pulgadas con teclado y ratón</p>
+            <ul class="product-card__specs">
+              <li class="chip">27″</li>
+              <li class="chip">Teclado y ratón</li>
+              <li class="chip">Diseño limpio</li>
+            </ul>
+            <div class="product-card__footer">
+              <p class="product-card__price"><span class="product-card__from">Desde</span>1.349 €</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="comparador-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow">Comparador</p>
+          <h2 class="section__title" id="comparador-title">Compara antes de decidir</h2>
+          <p class="section__lead">Las características principales de los tres equipos, una al lado de la otra.</p>
+        </header>
+
+        <div class="table-wrap">
+          <table class="compare-table">
+            <caption class="sr-only">Comparativa de los equipos AURA 14, NEXUS X y STUDIO 27</caption>
+            <thead>
+              <tr>
+                <th scope="col">Característica</th>
+                <th scope="col">AURA 14</th>
+                <th scope="col">NEXUS X</th>
+                <th scope="col">STUDIO 27</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Tipo</th>
+                <td>Portátil</td>
+                <td>Sobremesa</td>
+                <td>Todo en uno</td>
+              </tr>
+              <tr>
+                <th scope="row">Procesador</th>
+                <td>8 núcleos, hasta 4,6 GHz</td>
+                <td>8 núcleos / 16 hilos, hasta 5,2 GHz</td>
+                <td>10 núcleos, hasta 4,7 GHz</td>
+              </tr>
+              <tr>
+                <th scope="row">Gráfica</th>
+                <td>Integrada</td>
+                <td>Dedicada de 12 GB</td>
+                <td>Integrada</td>
+              </tr>
+              <tr>
+                <th scope="row">Pantalla</th>
+                <td>14″ 2.8K a 120 Hz</td>
+                <td>No incluida (hasta 4 monitores)</td>
+                <td>27″ 4K, 98 % DCI-P3</td>
+              </tr>
+              <tr>
+                <th scope="row">Memoria</th>
+                <td>16 o 32 GB</td>
+                <td>32 o 64 GB (hasta 128 GB)</td>
+                <td>16 o 32 GB</td>
+              </tr>
+              <tr>
+                <th scope="row">Almacenamiento</th>
+                <td>512 GB o 1 TB</td>
+                <td>1 o 2 TB</td>
+                <td>1 o 2 TB</td>
+              </tr>
+              <tr>
+                <th scope="row">Puertos destacados</th>
+                <td>Thunderbolt 4 y HDMI 2.1</td>
+                <td>3 × DisplayPort y HDMI 2.1</td>
+                <td>Thunderbolt 4 y lector SD</td>
+              </tr>
+              <tr>
+                <th scope="row">Peso</th>
+                <td>1,35 kg</td>
+                <td>9,8 kg</td>
+                <td>7,9 kg</td>
+              </tr>
+              <tr>
+                <th scope="row">Ideal para</th>
+                <td>Estudiar y trabajar en movimiento</td>
+                <td>Jugar, editar y crear</td>
+                <td>Diseñar y trabajar en casa</td>
+              </tr>
+              <tr>
+                <th scope="row">Precio desde</th>
+                <td class="compare-table__price">1.199 €</td>
+                <td class="compare-table__price">1.499 €</td>
+                <td class="compare-table__price">1.349 €</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Ayuda para elegir equipo">
+      <div class="container">
+        <div class="cta-band">
+          <div class="cta-band__text">
+            <h2 class="cta-band__title">¿Necesitas ayuda para decidir?</h2>
+            <p class="cta-band__lead">Te asesoramos sin compromiso según el uso que le vayas a dar.</p>
+          </div>
+          <a class="btn btn--primary btn--lg" href="contacto.html">Contactar</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <a class="logo" href="index.html" aria-label="ORBIT PC, ir al inicio">
+        <img src="img/logo.svg" width="180" height="40" alt="ORBIT PC">
+        <span class="logo__tagline">Tecnología para tu mundo</span>
+      </a>
+      <nav aria-label="Enlaces del pie de página">
+        <ul class="site-footer__links">
+          <li><a href="tienda.html">Tienda</a></li>
+          <li><a href="aura-14.html">AURA 14</a></li>
+          <li><a href="nexus-x.html">NEXUS X</a></li>
+          <li><a href="studio-27.html">STUDIO 27</a></li>
+          <li><a href="soporte.html">Soporte</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <p class="site-footer__copy">© 2026 ORBIT PC · Equipo conceptual · Práctica de Diseño de Interfaces</p>
+    </div>
+    <div class="container"><p class="site-footer__copy">Textos e ilustraciones originales de ORBIT PC por José Antonio Núñez Lloret: <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>. Los recursos de terceros conservan sus propias licencias.</p></div>
+  </footer>
+  <script src="js/menu.js" defer></script>
+  <script src="js/tienda.js" defer></script>
+</body>
+</html>
