@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -62,14 +62,14 @@
     </section>
 
     <section class="container" id="listado" aria-label="Listado de productos">
-      <div class="product-grid">
-        <article class="product-card" data-categoria="portatil" data-precio="1299" data-orden="0">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4" id="listado-productos">
+        <div class="col"><article class="product-card" id="asus-zenbook" data-categoria="portatil" data-precio="1299" data-orden="0">
           <div class="product-card__media">
             <img src="img/tienda/portatil1.gif" width="660" height="435" alt="">
           </div>
           <div class="product-card__body">
             <p class="eyebrow">Portátil</p>
-            <h2 class="product-card__title">ASUS ZenBook</h2>
+            <h2 class="product-card__title"><a class="product-card__link" href="asus-zenbook.html">ASUS ZenBook</a></h2>
             <p class="product-card__text">Diseño ultrafino con pantalla amplia</p>
             <ul class="product-card__specs">
               <li class="chip">Diseño ultrafino</li>
@@ -80,15 +80,15 @@
               <p class="product-card__price"><span class="product-card__from">Desde</span>1.299 €</p>
             </div>
           </div>
-        </article>
+        </article></div>
 
-        <article class="product-card" data-categoria="sobremesa" data-precio="1499" data-orden="1">
+        <div class="col"><article class="product-card" id="abysm-gaming" data-categoria="sobremesa" data-precio="1499" data-orden="1">
           <div class="product-card__media">
             <img src="img/tienda/sobremesa%201.jpg" width="554" height="554" alt="">
           </div>
           <div class="product-card__body">
             <p class="eyebrow">Sobremesa</p>
-            <h2 class="product-card__title">ABYSM Gaming</h2>
+            <h2 class="product-card__title"><a class="product-card__link" href="abysm-gaming.html">ABYSM Gaming</a></h2>
             <p class="product-card__text">Potencia para jugar y crear</p>
             <ul class="product-card__specs">
               <li class="chip">GeForce RTX</li>
@@ -99,15 +99,15 @@
               <p class="product-card__price"><span class="product-card__from">Desde</span>1.499 €</p>
             </div>
           </div>
-        </article>
+        </article></div>
 
-        <article class="product-card" data-categoria="todo-en-uno" data-precio="999" data-orden="2">
+        <div class="col"><article class="product-card" id="lenovo-all-in-one" data-categoria="todo-en-uno" data-precio="999" data-orden="2">
           <div class="product-card__media">
             <img src="img/tienda/todoenuno1.webp" width="412" height="462" alt="">
           </div>
           <div class="product-card__body">
             <p class="eyebrow">Todo en uno</p>
-            <h2 class="product-card__title">Lenovo All-in-One</h2>
+            <h2 class="product-card__title"><a class="product-card__link" href="lenovo-all-in-one.html">Lenovo All-in-One</a></h2>
             <p class="product-card__text">Todo integrado en un solo equipo</p>
             <ul class="product-card__specs">
               <li class="chip">Diseño compacto</li>
@@ -118,15 +118,15 @@
               <p class="product-card__price"><span class="product-card__from">Desde</span>999 €</p>
             </div>
           </div>
-        </article>
+        </article></div>
 
-        <article class="product-card" data-categoria="portatil" data-precio="1199" data-orden="3">
+        <div class="col"><article class="product-card" id="lenovo-yoga" data-categoria="portatil" data-precio="1199" data-orden="3">
           <div class="product-card__media">
             <img src="img/tienda/portatil2.avif" alt="">
           </div>
           <div class="product-card__body">
             <p class="eyebrow">Portátil</p>
-            <h2 class="product-card__title">Lenovo Yoga</h2>
+            <h2 class="product-card__title"><a class="product-card__link" href="lenovo-yoga.html">Lenovo Yoga</a></h2>
             <p class="product-card__text">Portátil y tablet en un solo equipo</p>
             <ul class="product-card__specs">
               <li class="chip">Pantalla táctil</li>
@@ -137,15 +137,15 @@
               <p class="product-card__price"><span class="product-card__from">Desde</span>1.199 €</p>
             </div>
           </div>
-        </article>
+        </article></div>
 
-        <article class="product-card" data-categoria="sobremesa" data-precio="1699" data-orden="4">
+        <div class="col"><article class="product-card" id="epical-q-gaming" data-categoria="sobremesa" data-precio="1699" data-orden="4">
           <div class="product-card__media">
             <img src="img/tienda/sobremesa2.jpg" width="554" height="554" alt="">
           </div>
           <div class="product-card__body">
             <p class="eyebrow">Sobremesa</p>
-            <h2 class="product-card__title">Epical-Q Gaming</h2>
+            <h2 class="product-card__title"><a class="product-card__link" href="epical-q-gaming.html">Epical-Q Gaming</a></h2>
             <p class="product-card__text">Rendimiento para juegos y edición</p>
             <ul class="product-card__specs">
               <li class="chip">GeForce RTX</li>
@@ -156,15 +156,15 @@
               <p class="product-card__price"><span class="product-card__from">Desde</span>1.699 €</p>
             </div>
           </div>
-        </article>
+        </article></div>
 
-        <article class="product-card" data-categoria="todo-en-uno" data-precio="1149" data-orden="5">
+        <div class="col"><article class="product-card" id="hp-all-in-one" data-categoria="todo-en-uno" data-precio="1149" data-orden="5">
           <div class="product-card__media">
             <img src="img/tienda/todoenuno2.webp" width="412" height="452" alt="">
           </div>
           <div class="product-card__body">
             <p class="eyebrow">Todo en uno</p>
-            <h2 class="product-card__title">HP All-in-One</h2>
+            <h2 class="product-card__title"><a class="product-card__link" href="hp-all-in-one.html">HP All-in-One</a></h2>
             <p class="product-card__text">Pantalla limpia y teclado inalámbrico</p>
             <ul class="product-card__specs">
               <li class="chip">Diseño compacto</li>
@@ -175,15 +175,15 @@
               <p class="product-card__price"><span class="product-card__from">Desde</span>1.149 €</p>
             </div>
           </div>
-        </article>
+        </article></div>
 
-        <article class="product-card" data-categoria="portatil" data-precio="1199" data-orden="6">
+        <div class="col"><article class="product-card" id="macbook-air-13" data-categoria="portatil" data-precio="1199" data-orden="6">
           <div class="product-card__media">
             <img src="img/tienda/portatil3.jpg" width="1200" height="800" alt="">
           </div>
           <div class="product-card__body">
             <p class="eyebrow">Portátil</p>
-            <h2 class="product-card__title">MacBook Air 13,6″</h2>
+            <h2 class="product-card__title"><a class="product-card__link" href="macbook-air-13.html">MacBook Air 13,6″</a></h2>
             <p class="product-card__text">Ligero para estudiar y trabajar</p>
             <ul class="product-card__specs">
               <li class="chip">13,6″</li>
@@ -194,15 +194,15 @@
               <p class="product-card__price"><span class="product-card__from">Desde</span>1.199 €</p>
             </div>
           </div>
-        </article>
+        </article></div>
 
-        <article class="product-card" data-categoria="sobremesa" data-precio="1899" data-orden="7">
+        <div class="col"><article class="product-card" id="msi-gaming" data-categoria="sobremesa" data-precio="1899" data-orden="7">
           <div class="product-card__media">
             <img src="img/tienda/Sobremesa3.webp" width="800" height="800" alt="">
           </div>
           <div class="product-card__body">
             <p class="eyebrow">Sobremesa</p>
-            <h2 class="product-card__title">MSI Gaming</h2>
+            <h2 class="product-card__title"><a class="product-card__link" href="msi-gaming.html">MSI Gaming</a></h2>
             <p class="product-card__text">Torre con cristal y gran ventilación</p>
             <ul class="product-card__specs">
               <li class="chip">GeForce RTX</li>
@@ -213,15 +213,15 @@
               <p class="product-card__price"><span class="product-card__from">Desde</span>1.899 €</p>
             </div>
           </div>
-        </article>
+        </article></div>
 
-        <article class="product-card" data-categoria="todo-en-uno" data-precio="1349" data-orden="8">
+        <div class="col"><article class="product-card" id="ideacentre-27" data-categoria="todo-en-uno" data-precio="1349" data-orden="8">
           <div class="product-card__media">
             <img src="img/tienda/todoenuno3.webp" width="412" height="416" alt="">
           </div>
           <div class="product-card__body">
             <p class="eyebrow">Todo en uno</p>
-            <h2 class="product-card__title">Lenovo IdeaCentre 27″</h2>
+            <h2 class="product-card__title"><a class="product-card__link" href="ideacentre-27.html">Lenovo IdeaCentre 27″</a></h2>
             <p class="product-card__text">Pantalla de 27 pulgadas con teclado y ratón</p>
             <ul class="product-card__specs">
               <li class="chip">27″</li>
@@ -232,96 +232,11 @@
               <p class="product-card__price"><span class="product-card__from">Desde</span>1.349 €</p>
             </div>
           </div>
-        </article>
+        </article></div>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="comparador-title">
-      <div class="container">
-        <header class="section__head">
-          <p class="eyebrow">Comparador</p>
-          <h2 class="section__title" id="comparador-title">Compara antes de decidir</h2>
-          <p class="section__lead">Las características principales de los tres equipos, una al lado de la otra.</p>
-        </header>
-
-        <div class="table-wrap">
-          <table class="compare-table">
-            <caption class="sr-only">Comparativa de los equipos AURA 14, NEXUS X y STUDIO 27</caption>
-            <thead>
-              <tr>
-                <th scope="col">Característica</th>
-                <th scope="col">AURA 14</th>
-                <th scope="col">NEXUS X</th>
-                <th scope="col">STUDIO 27</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">Tipo</th>
-                <td>Portátil</td>
-                <td>Sobremesa</td>
-                <td>Todo en uno</td>
-              </tr>
-              <tr>
-                <th scope="row">Procesador</th>
-                <td>8 núcleos, hasta 4,6 GHz</td>
-                <td>8 núcleos / 16 hilos, hasta 5,2 GHz</td>
-                <td>10 núcleos, hasta 4,7 GHz</td>
-              </tr>
-              <tr>
-                <th scope="row">Gráfica</th>
-                <td>Integrada</td>
-                <td>Dedicada de 12 GB</td>
-                <td>Integrada</td>
-              </tr>
-              <tr>
-                <th scope="row">Pantalla</th>
-                <td>14″ 2.8K a 120 Hz</td>
-                <td>No incluida (hasta 4 monitores)</td>
-                <td>27″ 4K, 98 % DCI-P3</td>
-              </tr>
-              <tr>
-                <th scope="row">Memoria</th>
-                <td>16 o 32 GB</td>
-                <td>32 o 64 GB (hasta 128 GB)</td>
-                <td>16 o 32 GB</td>
-              </tr>
-              <tr>
-                <th scope="row">Almacenamiento</th>
-                <td>512 GB o 1 TB</td>
-                <td>1 o 2 TB</td>
-                <td>1 o 2 TB</td>
-              </tr>
-              <tr>
-                <th scope="row">Puertos destacados</th>
-                <td>Thunderbolt 4 y HDMI 2.1</td>
-                <td>3 × DisplayPort y HDMI 2.1</td>
-                <td>Thunderbolt 4 y lector SD</td>
-              </tr>
-              <tr>
-                <th scope="row">Peso</th>
-                <td>1,35 kg</td>
-                <td>9,8 kg</td>
-                <td>7,9 kg</td>
-              </tr>
-              <tr>
-                <th scope="row">Ideal para</th>
-                <td>Estudiar y trabajar en movimiento</td>
-                <td>Jugar, editar y crear</td>
-                <td>Diseñar y trabajar en casa</td>
-              </tr>
-              <tr>
-                <th scope="row">Precio desde</th>
-                <td class="compare-table__price">1.199 €</td>
-                <td class="compare-table__price">1.499 €</td>
-                <td class="compare-table__price">1.349 €</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
+    
     <section class="section" aria-label="Ayuda para elegir equipo">
       <div class="container">
         <div class="cta-band">
@@ -344,9 +259,7 @@
       <nav aria-label="Enlaces del pie de página">
         <ul class="site-footer__links">
           <li><a href="tienda.html">Tienda</a></li>
-          <li><a href="aura-14.html">AURA 14</a></li>
-          <li><a href="nexus-x.html">NEXUS X</a></li>
-          <li><a href="studio-27.html">STUDIO 27</a></li>
+          <li><a href="presentacion.html">Presentación</a></li>
           <li><a href="soporte.html">Soporte</a></li>
           <li><a href="contacto.html">Contacto</a></li>
         </ul>

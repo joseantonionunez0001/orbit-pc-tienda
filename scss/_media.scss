@@ -1,0 +1,70 @@
+/* Práctica 6: multimedia */
+[hidden] {
+  display: none !important;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+.media-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: var(--space-md);
+}
+
+.video-card {
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+}
+
+.video-card__player {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+}
+
+.video-card__caption {
+  padding: 0.85rem 1.1rem;
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+}
+
+.audio-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.85rem;
+  padding: var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(ellipse 80% 70% at 0% 100%, rgba(116, 227, 199, 0.12), transparent 70%),
+    var(--color-surface);
+}
+
+.audio-card__title {
+  font-size: var(--fs-lg);
+  line-height: 1.25;
+}
+
+.audio-card__text {
+  color: var(--color-text-muted);
+}
+
+.audio-card__player {
+  width: 100%;
+  color-scheme: dark;
+}
+
+.audio-card__note {
+  font-size: var(--fs-xs);
+  color: var(--color-text-subtle);
+}
+

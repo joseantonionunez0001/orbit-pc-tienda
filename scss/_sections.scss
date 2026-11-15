@@ -1,0 +1,38 @@
+.section {
+  padding-block: var(--space-xl);
+}
+
+.section__head {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 640px;
+  margin-bottom: var(--space-lg);
+}
+
+.section__title {
+  font-size: var(--fs-xl);
+  text-transform: uppercase;
+}
+
+.section__lead {
+  color: var(--color-text-muted);
+}
+
+.page-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding-block: var(--space-xl) var(--space-lg);
+}
+
+.page-intro__title {
+  font-size: var(--fs-2xl);
+  text-transform: uppercase;
+}
+
+.page-intro__lead {
+  max-width: 620px;
+  color: var(--color-text-muted);
+}
+

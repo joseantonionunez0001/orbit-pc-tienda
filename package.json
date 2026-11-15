@@ -1,0 +1,16 @@
+{
+  "name": "orbit-pc",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Web de la tienda ORBIT PC (práctica 7)",
+  "license": "CC-BY-NC-SA-4.0",
+  "scripts": {
+    "build:css": "sass --load-path=node_modules --no-source-map --silence-deprecation=import --style=expanded scss/main.scss css/main.css",
+    "watch:css": "sass --watch --load-path=node_modules --no-source-map --silence-deprecation=import --style=expanded scss/main.scss css/main.css",
+    "dev": "npm run watch:css"
+  },
+  "devDependencies": {
+    "bootstrap": "5.3.8",
+    "sass": "1.107.0"
+  }
+}

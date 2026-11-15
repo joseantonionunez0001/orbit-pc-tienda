@@ -1,0 +1,68 @@
+// =============================================
+// Variables de ORBIT PC (tema claro)
+// Se definen antes de importar Bootstrap para que sus valores por defecto
+// (!default) usen la identidad de la marca.
+// =============================================
+
+// Colores de marca
+$color-bg: #ffffff;
+$color-surface: #ffffff;
+$color-surface-2: #f4f6f9;
+$color-border: #e2e7ef;
+$color-border-soft: rgba(15, 23, 42, 0.08);
+$color-accent: #0b8f74;
+$color-accent-hover: #076e5a;
+$color-accent-soft: rgba(11, 143, 116, 0.1);
+$color-text: #0f172a;
+$color-text-muted: #4b5565;
+$color-text-subtle: #6b7383;
+$color-on-accent: #ffffff;
+$color-error: #c2394a;
+
+// Tipografía
+$font-base: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+// Espaciado y formas
+$space-xs: 0.5rem;
+$space-sm: 1rem;
+$space-md: 1.5rem;
+$space-lg: 2.5rem;
+$space-xl: 4rem;
+$space-2xl: 6rem;
+$radius-sm: 8px;
+$radius-md: 12px;
+$radius-lg: 18px;
+$radius-pill: 999px;
+
+// Sombras y transiciones
+$shadow-card: 0 24px 48px -28px rgba(15, 23, 42, 0.25);
+$glow-accent: 0 0 0 1px $color-accent, 0 18px 48px -18px rgba(11, 143, 116, 0.25);
+$transition-base: 180ms ease;
+
+// Medidas de la maqueta
+$container-max: 1200px;
+$container-max-xxl: 1320px;
+$header-height: 88px;
+
+// -----------------------------------------
+// Configuración de Bootstrap (debe ir antes de su importación)
+// -----------------------------------------
+$primary: $color-accent;
+$body-bg: $color-bg;
+$body-color: $color-text;
+$link-color: $color-accent;
+$font-family-base: $font-base;
+$headings-font-weight: 800;
+$border-radius: $radius-sm;
+$enable-shadows: false;
+$container-padding-x: 1.25rem;
+$container-max-widths: (
+  xl: $container-max,
+  xxl: $container-max-xxl
+);
+$input-bg: $color-bg;
+$input-color: $color-text;
+$input-border-color: $color-border;
+$input-focus-border-color: $color-accent;
+$input-focus-box-shadow: 0 0 0 3px $color-accent-soft;
+$input-placeholder-color: $color-text-subtle;

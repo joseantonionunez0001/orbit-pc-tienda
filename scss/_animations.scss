@@ -1,0 +1,79 @@
+// =============================================
+// Animaciones de ORBIT PC
+// Diferencia usada en el proyecto:
+//  - Animación (@keyframes): varios pasos definidos por nosotros y que se
+//    reproducen solos al aparecer el elemento (slider, entrada de la portada).
+//  - Transición (transition): cambio entre dos estados de un elemento al
+//    interactuar (hover, foco, pulsación de botones y tarjetas).
+// =============================================
+
+// Entrada de un bloque: aparece desde abajo con fundido
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Cambio de diapositiva del slider: entra desde la derecha y se ve poco a poco
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(40px) scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+// Texto de la diapositiva: sube un poco después de que entre la imagen
+@keyframes caption-rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Entrada del bloque principal de la portada (solo una vez al cargar)
+.hero__content,
+.hero__visual {
+  animation: fade-up 700ms ease-out both;
+}
+
+.hero__visual {
+  animation-delay: 150ms;
+}
+
+// Transición de interacción del botón: se hunde al pulsar
+.btn {
+  &:active {
+    transform: scale(0.97);
+  }
+}
+
+// Movimiento reducido: sin animaciones de entrada ni transiciones largas
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

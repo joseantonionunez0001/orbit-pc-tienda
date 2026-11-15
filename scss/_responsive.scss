@@ -1,0 +1,220 @@
+@media (max-width: 960px) {
+  .hero__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: auto;
+    gap: var(--space-lg);
+  }
+
+  .hero__visual {
+    flex-basis: auto;
+    width: 100%;
+  }
+
+  .product__layout {
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
+
+  .product__info {
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .contact {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .contact__aside {
+    position: static;
+  }
+
+  .tech-group {
+    flex-basis: 100%;
+  }
+
+  .contact__aside,
+  .contact-form {
+    flex-basis: auto;
+  }
+}
+
+@media (max-width: 680px) {
+  :root {
+    --space-xl: 3rem;
+    --space-lg: 1.75rem;
+  }
+
+  .btn--lg {
+    width: 100%;
+  }
+
+  .product__buy {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .contact-form {
+    padding: var(--space-md);
+  }
+
+  .cta-band {
+    padding: var(--space-md);
+  }
+
+  .info-card,
+  .tech-group {
+    padding: var(--space-md);
+  }
+
+  .hero__chip {
+    font-size: var(--fs-xs);
+    padding: 0.45rem 0.8rem;
+  }
+
+  .hero__chip--top {
+    top: -6%;
+  }
+
+  .rating__label {
+    flex-basis: 92px;
+  }
+}
+
+/* Práctica 6: diseño responsive */
+
+/* Portátiles y tablets en horizontal */
+@media (max-width: 1024px) {
+  .feature-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero__inner {
+    gap: var(--space-lg);
+  }
+
+  .cta-band {
+    padding: var(--space-md);
+  }
+}
+
+/* Tablets en vertical y móviles grandes */
+@media (max-width: 900px) {
+  .media-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .audio-card {
+    padding: var(--space-md) var(--space-md) 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  .site-header__inner {
+    flex-wrap: wrap;
+    min-height: 76px;
+  }
+
+  .main-nav {
+    display: none;
+    width: 100%;
+    padding-bottom: 0.5rem;
+  }
+
+  .main-nav.is-open {
+    display: block;
+  }
+
+  .main-nav__list {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .main-nav__link {
+    padding: 0.95rem 0;
+    border-top: 1px solid var(--color-border-soft);
+  }
+
+  .main-nav__link::after {
+    display: none;
+  }
+
+  .site-footer__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-footer__links {
+    gap: var(--space-xs) var(--space-md);
+  }
+
+  .toolbar__orden {
+    width: 100%;
+  }
+
+  .toolbar__select {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .cta-band {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+/* Móviles pequeños */
+@media (max-width: 520px) {
+
+.feature-list {
+    grid-template-columns: 1fr;
+  }
+
+  .logo__tagline {
+    display: none;
+  }
+
+  .hero__chip--side {
+    display: none;
+  }
+
+  .hero__chip--top {
+    left: 4px;
+  }
+
+  .toolbar__filtros {
+    flex-wrap: nowrap;
+    margin-inline: -1rem;
+    padding-inline: 1rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .filtro {
+    flex: 0 0 auto;
+  }
+
+  .product-card__footer {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .highlight {
+    flex-basis: 45%;
+    padding: var(--space-md) var(--space-sm);
+  }
+}
+
+/* En pantallas táctiles no tiene sentido levantar las tarjetas al pasar el ratón */
+@media (hover: none) {
+  .product-card:hover {
+    transform: none;
+  }
+}

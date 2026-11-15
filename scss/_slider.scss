@@ -1,0 +1,175 @@
+// =============================================
+// Slider de la página de inicio
+// Sin JavaScript se ven las tres diapositivas en columna (todas accesibles).
+// Con JavaScript, la clase .slider--js activa el modo "una a la vez" con
+// fundidos y desplazamientos definidos en @keyframes (ver _animations.scss).
+// =============================================
+
+.slider {
+  position: relative;
+  // Recorta el desplazamiento de entrada para que no genere scroll horizontal
+  overflow-x: clip;
+}
+
+// Modo sin JavaScript: las diapositivas se apilan y son visibles siempre
+.slider__slide {
+  margin: 0;
+}
+
+.slider__slide + .slider__slide {
+  margin-top: $space-md;
+}
+
+.slider__media {
+  overflow: hidden;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+  background: $color-surface-2;
+}
+
+.slider__media img {
+  width: 100%;
+  height: clamp(220px, 34vw, 380px);
+  object-fit: contain;
+  padding: $space-md;
+}
+
+.slider__caption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: $space-sm;
+  padding: $space-md 0 0;
+}
+
+.slider__caption-title {
+  font-size: var(--fs-lg);
+  font-weight: 800;
+}
+
+.slider__caption-text {
+  color: $color-text-muted;
+  font-size: var(--fs-sm);
+}
+
+// Modo con JavaScript: una diapositiva visible cada vez
+.slider--js {
+  .slider__track {
+    position: relative;
+  }
+
+  .slider__slide {
+    position: absolute;
+    inset: 0 0 auto 0;
+    display: none;
+    opacity: 0;
+    margin: 0;
+  }
+
+  .slider__slide + .slider__slide {
+    margin-top: 0;
+  }
+
+  .slider__slide.is-active {
+    position: relative;
+    display: block;
+    opacity: 1;
+  }
+
+  .slider__slide.is-active .slider__media {
+    animation: slide-in 700ms ease-out both;
+  }
+
+  .slider__slide.is-active .slider__caption {
+    animation: caption-rise 600ms ease-out 250ms both;
+  }
+}
+
+// Controles accesibles: botones con texto o nombre accesible
+.slider__controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: $space-sm;
+  margin-top: $space-md;
+
+  &[hidden] {
+    display: none;
+  }
+}
+
+.slider__buttons {
+  display: flex;
+  align-items: center;
+  gap: $space-xs;
+}
+
+.slider__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  min-height: 48px;
+  padding: 0 $space-sm;
+  border: 1px solid $color-border;
+  border-radius: $radius-sm;
+  background: $color-surface;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $color-text;
+  cursor: pointer;
+  transition: border-color $transition-base, color $transition-base, background-color $transition-base,
+    transform 120ms ease;
+
+  &:hover {
+    border-color: $color-accent;
+    color: $color-accent;
+  }
+
+  &:active {
+    transform: scale(0.96);
+  }
+
+  &:focus-visible {
+    @include focus-ring;
+  }
+}
+
+.slider__dots {
+  display: flex;
+  gap: $space-xs;
+}
+
+.slider__dot {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+
+  // El punto visible es un pseudo-elemento; el área de pulsación mide 44 px
+  &::before {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    margin: 16px auto;
+    border-radius: 50%;
+    background: $color-border;
+    transition: background-color $transition-base, transform $transition-base;
+  }
+
+  &[aria-current="true"]::before {
+    background: $color-accent;
+    transform: scale(1.25);
+  }
+
+  &:focus-visible {
+    @include focus-ring;
+  }
+}

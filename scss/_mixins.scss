@@ -1,0 +1,16 @@
+// =============================================
+// Mixins propios de ORBIT PC
+// =============================================
+
+// Anillo de foco visible para teclado (WCAG 2.4.7)
+@mixin focus-ring {
+  outline: 2px solid $color-accent;
+  outline-offset: 3px;
+}
+
+// Estilos solo para dispositivos con ratón (evita elevar tarjetas en táctiles)
+@mixin hover-capable {
+  @media (hover: hover) {
+    @content;
+  }
+}
