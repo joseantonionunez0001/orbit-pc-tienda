@@ -1,13 +1,6 @@
-// =============================================
-// Animaciones de ORBIT PC
-// Diferencia usada en el proyecto:
-//  - Animación (@keyframes): varios pasos definidos por nosotros y que se
-//    reproducen solos al aparecer el elemento (slider, entrada de la portada).
-//  - Transición (transition): cambio entre dos estados de un elemento al
-//    interactuar (hover, foco, pulsación de botones y tarjetas).
-// =============================================
+// Animación (@keyframes): varios pasos que se reproducen solos al aparecer el elemento.
+// Transición (transition): cambio entre dos estados al interactuar (hover, foco, pulsación).
 
-// Entrada de un bloque: aparece desde abajo con fundido
 @keyframes fade-up {
   from {
     opacity: 0;
@@ -20,7 +13,6 @@
   }
 }
 
-// Cambio de diapositiva del slider: entra desde la derecha y se ve poco a poco
 @keyframes slide-in {
   from {
     opacity: 0;
@@ -33,7 +25,6 @@
   }
 }
 
-// Texto de la diapositiva: sube un poco después de que entre la imagen
 @keyframes caption-rise {
   from {
     opacity: 0;
@@ -56,7 +47,6 @@
   animation-delay: 150ms;
 }
 
-// Transición de interacción del botón: se hunde al pulsar
 .btn {
   &:active {
     transform: scale(0.97);

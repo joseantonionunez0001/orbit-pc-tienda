@@ -1,9 +1,5 @@
-// =============================================
-// Slider de la página de inicio
 // Sin JavaScript se ven las tres diapositivas en columna (todas accesibles).
-// Con JavaScript, la clase .slider--js activa el modo "una a la vez" con
-// fundidos y desplazamientos definidos en @keyframes (ver _animations.scss).
-// =============================================
+// Con JavaScript, la clase .slider--js activa el modo "una a la vez" (ver _animations.scss).
 
 .slider {
   position: relative;
@@ -86,7 +82,6 @@
   }
 }
 
-// Controles accesibles: botones con texto o nombre accesible
 .slider__controls {
   display: flex;
   flex-wrap: wrap;

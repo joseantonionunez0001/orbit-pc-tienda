@@ -82,9 +82,6 @@
   }
 }
 
-/* Práctica 6: diseño responsive */
-
-/* Portátiles y tablets en horizontal */
 @media (max-width: 1024px) {
   .feature-list {
     display: grid;
@@ -100,7 +97,6 @@
   }
 }
 
-/* Tablets en vertical y móviles grandes */
 @media (max-width: 900px) {
   .media-layout {
     grid-template-columns: 1fr;
@@ -170,7 +166,6 @@
   }
 }
 
-/* Móviles pequeños */
 @media (max-width: 520px) {
 
 .feature-list {

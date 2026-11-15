@@ -1,17 +1,11 @@
-// =============================================
 // ORBIT PC · hoja de estilos principal
 // Compilar con: npm run build:css  (genera css/main.css)
-// Orden: 1) variables propias  2) Bootstrap (solo los módulos usados)
-//        3) estilos propios por parciales
-// =============================================
 
 // 1. Variables propias y configuración de Bootstrap
 @import "variables";
 @import "mixins";
 
-// 2. Bootstrap 5.3: base, rejilla, contenedores, formularios y utilidades.
-//    No importamos el módulo de botones ni de menús: esos componentes los
-//    dibuja nuestro CSS, así no hay dos estilos para la misma clase.
+// 2. Bootstrap: no se importan botones ni menús, los dibuja nuestro CSS.
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";
 @import "bootstrap/scss/maps";
@@ -22,7 +16,7 @@
 @import "bootstrap/scss/forms";
 @import "bootstrap/scss/utilities";
 
-// 3. Estilos propios de ORBIT PC (el orden importa: lo último gana)
+// 3. Estilos propios (el orden importa: lo último gana)
 @import "root";
 @import "base";
 @import "header";
