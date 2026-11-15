@@ -1,17 +1,17 @@
 :root {
-  --color-bg: #0a1120;
-  --color-surface: #131c2e;
-  --color-surface-2: #1a2438;
-  --color-border: #233047;
-  --color-border-soft: rgba(148, 160, 180, 0.14);
-  --color-accent: #74e3c7;
-  --color-accent-hover: #9aeed8;
-  --color-accent-soft: rgba(116, 227, 199, 0.12);
-  --color-text: #f1f4f9;
-  --color-text-muted: #9aa6ba;
-  --color-text-subtle: #66738a;
-  --color-on-accent: #0a1120;
-  --color-error: #ff8a94;
+  --color-bg: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-2: #f4f6f9;
+  --color-border: #e2e7ef;
+  --color-border-soft: rgba(15, 23, 42, 0.08);
+  --color-accent: #0b8f74;
+  --color-accent-hover: #076e5a;
+  --color-accent-soft: rgba(11, 143, 116, 0.1);
+  --color-text: #0f172a;
+  --color-text-muted: #4b5565;
+  --color-text-subtle: #6b7383;
+  --color-on-accent: #ffffff;
+  --color-error: #c2394a;
 
   --font-base: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --fs-xs: 0.75rem;
@@ -33,8 +33,8 @@
   --radius-md: 12px;
   --radius-lg: 18px;
   --radius-pill: 999px;
-  --shadow-card: 0 24px 48px -28px rgba(0, 0, 0, 0.7);
-  --glow-accent: 0 0 0 1px var(--color-accent), 0 18px 48px -18px rgba(116, 227, 199, 0.45);
+  --shadow-card: 0 24px 48px -28px rgba(15, 23, 42, 0.25);
+  --glow-accent: 0 0 0 1px var(--color-accent), 0 18px 48px -18px rgba(11, 143, 116, 0.25);
   --transition: 180ms ease;
 
   --container: 1200px;
@@ -163,7 +163,7 @@ button {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(10, 17, 32, 0.82);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--color-border-soft);
@@ -775,7 +775,7 @@ button {
   padding: 0.6rem 1rem;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-pill);
-  background: rgba(19, 28, 46, 0.88);
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   box-shadow: var(--shadow-card);
