@@ -112,6 +112,32 @@
   background: var(--color-surface-2);
 }
 
+.product__descripcion {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.product__ficha {
+  margin: 0;
+  font-size: var(--fs-sm);
+}
+
+.product__ficha dt,
+.product__ficha dd {
+  margin: 0;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--color-border-soft);
+}
+
+.product__ficha dt {
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.product__ficha dd {
+  font-weight: 700;
+}
+
 .product__compra {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
