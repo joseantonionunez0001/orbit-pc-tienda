@@ -35,33 +35,44 @@
   </header>
 
   <main id="contenido">
-    <article class="container product">
-      <a class="link-arrow back-link" href="perifericos.html">← Volver a periféricos</a>
+    <div class="container product">
+      <nav class="product__ruta" aria-label="Ruta de navegación">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+          <li class="breadcrumb-item"><a href="perifericos.html">Periféricos</a></li>
+          <li class="breadcrumb-item active" aria-current="page">ORBIT Mouse Pro</li>
+        </ol>
+      </nav>
 
-      <div class="product__layout">
-        <figure class="product__media">
-          <figcaption class="eyebrow">Ratón</figcaption>
-          <img src="img/tienda/raton2.webp" alt="Fotografía de ORBIT Mouse Pro">
-        </figure>
+      <div class="row g-4 g-lg-5">
+        <div class="col-12 col-lg-6">
+          <div class="card product__media h-100">
+            <div class="card-body d-flex align-items-center justify-content-center p-4 p-lg-5">
+              <img src="img/tienda/raton2.webp" alt="Fotografía de ORBIT Mouse Pro">
+            </div>
+          </div>
+        </div>
 
-        <div class="product__info">
-          <p class="eyebrow">Ratón</p>
-          <h1 class="product__title">ORBIT Mouse Pro</h1>
-          <p class="product__subtitle">Sensor de alta precisión</p>
-
-          <ul class="product-card__specs" aria-label="Características principales">
-            <li class="chip">Sensor de precisión</li>
-            <li class="chip">6 botones</li>
-            <li class="chip">Ergonómico</li>
-          </ul>
-
-          <div class="product__buy">
-            <p class="product__price"><span class="product-card__from">Desde</span>49 €</p>
-            <a class="btn btn--primary btn--lg" href="pago.html?producto=orbit-mouse-pro">Comprar producto</a>
+        <div class="col-12 col-lg-6">
+          <div class="product__info h-100">
+            <span class="badge align-self-start">Ratón</span>
+            <h1 class="product__title">ORBIT Mouse Pro</h1>
+            <p class="product__subtitle">Sensor de alta precisión</p>
+            <ul class="product__specs" aria-label="Características principales">
+              <li class="badge">Sensor de precisión</li>
+              <li class="badge">6 botones</li>
+              <li class="badge">Ergonómico</li>
+            </ul>
+            <div class="card product__compra mt-auto">
+              <div class="card-body d-flex flex-wrap align-items-center justify-content-between gap-3 p-4">
+                <p class="product__price mb-0"><span class="product-card__from">Desde</span>49 €</p>
+                <a class="btn btn--primary btn--lg" href="pago.html?producto=orbit-mouse-pro">Comprar producto</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </article>
+    </div>
   </main>
 
 <footer class="site-footer">
