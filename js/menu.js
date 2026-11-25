@@ -1,6 +1,5 @@
 "use strict";
 
-// Menú desplegable para pantallas pequeñas
 const boton = document.querySelector(".nav-toggle");
 const menu = document.getElementById("menu-principal");
 
@@ -13,7 +12,6 @@ if (boton && menu) {
 
   boton.addEventListener("click", () => abrir(!menu.classList.contains("is-open")));
 
-  // se cierra al elegir un enlace o al pulsar Escape
   menu.addEventListener("click", e => {
     if (e.target.closest("a")) abrir(false);
   });
@@ -24,7 +22,6 @@ if (boton && menu) {
     }
   });
 
-  // si se agranda la ventana, el menú vuelve a su sitio
   window.matchMedia("(min-width: 769px)").addEventListener("change", e => {
     if (e.matches) abrir(false);
   });

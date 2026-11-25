@@ -1,8 +1,5 @@
 "use strict";
 
-// Filtro por tipo de equipo y orden por precio en la tienda.
-// Cada tarjeta va dentro de una columna de la rejilla de Bootstrap (.col),
-// así que se filtran y ordenan las columnas completas.
 const lista = document.getElementById("listado-productos");
 const columnas = Array.from(lista.querySelectorAll(":scope > .col"));
 const filtros = document.querySelectorAll(".filtro");
@@ -30,7 +27,7 @@ function pintar() {
   });
   ordenadas.forEach((columna) => lista.appendChild(columna));
 
-  resultado.textContent = "Mostrando " + visibles + " de " + columnas.length + (columnas.length === 1 ? " equipo" : " equipos");
+  resultado.textContent = "Mostrando " + visibles + " de " + columnas.length + (columnas.length === 1 ? " producto" : " productos");
 }
 
 filtros.forEach((boton) => {

@@ -1,13 +1,9 @@
-// Sin JavaScript se ven las tres diapositivas en columna (todas accesibles).
-// Con JavaScript, la clase .slider--js activa el modo "una a la vez" (ver _animations.scss).
 
 .slider {
   position: relative;
-  // Recorta el desplazamiento de entrada para que no genere scroll horizontal
   overflow-x: clip;
 }
 
-// Modo sin JavaScript: las diapositivas se apilan y son visibles siempre
 .slider__slide {
   margin: 0;
 }
@@ -49,7 +45,6 @@
   font-size: var(--fs-sm);
 }
 
-// Modo con JavaScript: una diapositiva visible cada vez
 .slider--js {
   .slider__track {
     position: relative;
@@ -147,7 +142,6 @@
   background: transparent;
   cursor: pointer;
 
-  // El punto visible es un pseudo-elemento; el área de pulsación mide 44 px
   &::before {
     content: "";
     display: block;

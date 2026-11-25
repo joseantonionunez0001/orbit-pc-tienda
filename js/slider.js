@@ -1,7 +1,5 @@
 "use strict";
 
-// Slider de la portada: controles, pausa y accesibilidad.
-// Si este script falla, las diapositivas siguen visibles en columna.
 const slider = document.querySelector("[data-slider]");
 
 if (slider) {
@@ -11,13 +9,11 @@ if (slider) {
   const botonToggle = slider.querySelector("[data-toggle]");
   const TIEMPO_ENTRE_SLIDES = 6000;
 
-  // Con movimiento reducido el slider no avanza solo
   const movimientoReducido = window.matchMedia("(prefers-reduced-motion: reduce)");
   let actual = 0;
   let temporizador = null;
   let reproduciendo = !movimientoReducido.matches;
 
-  // Activa el modo "una diapositiva a la vez" definido en el CSS
   slider.classList.add("slider--js");
   controles.hidden = false;
 
@@ -27,7 +23,6 @@ if (slider) {
     diapositivas.forEach((diapositiva, i) => {
       const activa = i === actual;
       diapositiva.classList.toggle("is-active", activa);
-      // Las diapositivas ocultas no reciben foco ni las lee el lector de pantalla
       diapositiva.toggleAttribute("inert", !activa);
       diapositiva.setAttribute("aria-hidden", String(!activa));
     });
@@ -55,7 +50,6 @@ if (slider) {
     botonToggle.setAttribute("aria-label", reproduciendo ? "Pausar el cambio automático" : "Reproducir el cambio automático");
   }
 
-  // Controles
   slider.querySelector("[data-prev]").addEventListener("click", () => mostrar(actual - 1));
   slider.querySelector("[data-next]").addEventListener("click", () => mostrar(actual + 1));
 
@@ -72,7 +66,6 @@ if (slider) {
     }
   });
 
-  // Al elegir manualmente una diapositiva se reinicia el contador
   controles.addEventListener("click", () => {
     if (reproduciendo) arrancar();
   });

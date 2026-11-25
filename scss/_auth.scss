@@ -1,0 +1,22 @@
+.auth {
+  padding-top: $space-lg;
+  padding-bottom: $space-xl;
+}
+
+.auth__card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: $shadow-card;
+}
+
+.auth__enlace {
+  margin: $space-md 0 0;
+  text-align: center;
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+}
+
+.auth__sesion {
+  text-align: center;
+  color: var(--color-text-muted);
+}

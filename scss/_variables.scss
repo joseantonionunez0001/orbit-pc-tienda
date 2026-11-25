@@ -1,4 +1,3 @@
-// Se definen antes de importar Bootstrap para que sus valores por defecto (!default) usen la identidad de la marca.
 
 $color-bg: #ffffff;
 $color-surface: #ffffff;
@@ -35,7 +34,6 @@ $container-max: 1200px;
 $container-max-xxl: 1320px;
 $header-height: 88px;
 
-// Configuración de Bootstrap (debe ir antes de su importación)
 $primary: $color-accent;
 $body-bg: $color-bg;
 $body-color: $color-text;

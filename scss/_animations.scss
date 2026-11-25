@@ -1,5 +1,3 @@
-// Animación (@keyframes): varios pasos que se reproducen solos al aparecer el elemento.
-// Transición (transition): cambio entre dos estados al interactuar (hover, foco, pulsación).
 
 @keyframes fade-up {
   from {
@@ -37,7 +35,6 @@
   }
 }
 
-// Entrada del bloque principal de la portada (solo una vez al cargar)
 .hero__content,
 .hero__visual {
   animation: fade-up 700ms ease-out both;
@@ -53,7 +50,6 @@
   }
 }
 
-// Movimiento reducido: sin animaciones de entrada ni transiciones largas
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

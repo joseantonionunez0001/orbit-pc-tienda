@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pago · ORBIT PC</title>
+  <meta name="description" content="Pago de demostración para la práctica. No se procesan pagos reales.">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="index.html" aria-label="ORBIT PC, ir al inicio">
+        <img src="img/logo.svg" width="180" height="40" alt="ORBIT PC">
+        <span class="logo__tagline">Tecnología para tu mundo</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="nav-toggle__barras" aria-hidden="true"></span>
+        <span class="sr-only">Abrir menú</span>
+      </button>
+      <nav class="main-nav" id="menu-principal" aria-label="Navegación principal">
+        <ul class="main-nav__list">
+          <li><a class="main-nav__link" href="index.html">Inicio</a></li>
+          <li><a class="main-nav__link" href="tienda.html" aria-current="page">Tienda</a></li>
+          <li><a class="main-nav__link" href="perifericos.html">Periféricos</a></li>
+          <li><a class="main-nav__link" href="soporte.html">Soporte</a></li>
+          <li><a class="main-nav__link" href="contacto.html">Contacto</a></li>
+          <li><a class="main-nav__link" href="login.html">Iniciar sesión</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <header class="container page-intro">
+      <p class="eyebrow">Compra</p>
+      <h1 class="page-intro__title">Finalizar compra</h1>
+      <p class="page-intro__lead">Simulación para la práctica. No se cobra ningún importe ni se piden datos bancarios.</p>
+    </header>
+
+    <section class="container" aria-label="Aviso de producto" id="aviso-producto" hidden>
+      <div class="alert alert-warning" role="alert">
+        <p class="mb-2">No hemos encontrado el producto que quieres comprar.</p>
+        <a class="link-arrow" href="tienda.html">Volver a la tienda</a>
+      </div>
+    </section>
+
+    <section class="container checkout" id="contenido-pago" aria-label="Datos del pedido">
+      <div class="row g-4">
+        <div class="col-12 col-lg-7">
+          <div class="card checkout__card">
+            <div class="card-body p-4">
+              <form id="form-pago" class="checkout__form" novalidate>
+                <h2 class="checkout__titulo">Datos de envío</h2>
+                <div class="row g-3">
+                  <div class="col-12">
+                    <label for="pago-nombre" class="form-label">Nombre y apellidos</label>
+                    <input type="text" class="form-control" id="pago-nombre" name="nombre" autocomplete="name" required>
+                    <div class="invalid-feedback">Escribe tu nombre y apellidos.</div>
+                  </div>
+                  <div class="col-12">
+                    <label for="pago-email" class="form-label">Correo electrónico</label>
+                    <input type="email" class="form-control" id="pago-email" name="email" placeholder="nombre@correo.com" autocomplete="email" required>
+                    <div class="invalid-feedback">Introduce un correo electrónico válido.</div>
+                  </div>
+                  <div class="col-12">
+                    <label for="pago-direccion" class="form-label">Dirección</label>
+                    <input type="text" class="form-control" id="pago-direccion" name="direccion" autocomplete="street-address" required>
+                    <div class="invalid-feedback">Escribe tu dirección.</div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label for="pago-ciudad" class="form-label">Ciudad</label>
+                    <input type="text" class="form-control" id="pago-ciudad" name="ciudad" autocomplete="address-level2" required>
+                    <div class="invalid-feedback">Escribe tu ciudad.</div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label for="pago-cp" class="form-label">Código postal</label>
+                    <input type="text" class="form-control" id="pago-cp" name="cp" inputmode="numeric" pattern="[0-9]{5}" autocomplete="postal-code" required>
+                    <div class="invalid-feedback">Escribe un código postal de 5 cifras.</div>
+                  </div>
+                  <div class="col-12">
+                    <label for="pago-provincia" class="form-label">Provincia</label>
+                    <input type="text" class="form-control" id="pago-provincia" name="provincia" autocomplete="address-level1" required>
+                    <div class="invalid-feedback">Escribe tu provincia.</div>
+                  </div>
+                </div>
+
+                <h2 class="checkout__titulo mt-5">Método de pago</h2>
+                <div class="mb-4">
+                  <label for="pago-metodo" class="form-label">Método de pago de demostración</label>
+                  <select class="form-select form-control" id="pago-metodo" name="metodo" required>
+                    <option value="" selected disabled>Selecciona un método</option>
+                    <option value="tarjeta">Tarjeta (simulada)</option>
+                    <option value="transferencia">Transferencia (simulada)</option>
+                    <option value="reembolso">Pago al recibir (simulado)</option>
+                  </select>
+                  <div class="invalid-feedback">Selecciona un método de pago.</div>
+                </div>
+
+                <button class="btn btn--primary btn--lg w-100" type="submit">Confirmar compra</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-5">
+          <aside class="card checkout__resumen" aria-labelledby="resumen-titulo">
+            <div class="card-body p-4">
+              <h2 class="checkout__titulo" id="resumen-titulo">Resumen del pedido</h2>
+              <img class="checkout__imagen" id="resumen-imagen" src="img/tienda/portatil1.gif" alt="" width="660" height="435">
+              <p class="checkout__nombre" id="resumen-nombre"></p>
+
+              <dl class="checkout__lista">
+                <div class="checkout__fila">
+                  <dt>Precio unitario</dt>
+                  <dd id="resumen-precio"></dd>
+                </div>
+                <div class="checkout__fila">
+                  <dt><label for="pago-cantidad">Cantidad</label></dt>
+                  <dd><input type="number" class="form-control checkout__cantidad" id="pago-cantidad" name="cantidad" form="form-pago" min="1" max="10" step="1" value="1" required></dd>
+                </div>
+                <div class="checkout__fila">
+                  <dt>Gastos de envío</dt>
+                  <dd>Gratis</dd>
+                </div>
+                <div class="checkout__fila checkout__fila--total">
+                  <dt>Precio total</dt>
+                  <dd id="resumen-total"></dd>
+                </div>
+              </dl>
+
+              <a class="btn btn--ghost w-100 mt-4" href="tienda.html">Volver a la tienda</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal fade" id="modal-compra" tabindex="-1" aria-labelledby="modal-compra-titulo" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="modal-compra-titulo">Compra realizada correctamente</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <p class="mb-0">Es una compra de demostración. No se ha cobrado ningún importe.</p>
+        </div>
+        <div class="modal-footer">
+          <a class="btn btn--primary" href="tienda.html">Volver a la tienda</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <a class="logo" href="index.html" aria-label="ORBIT PC, ir al inicio">
+        <img src="img/logo.svg" width="180" height="40" alt="ORBIT PC">
+        <span class="logo__tagline">Tecnología para tu mundo</span>
+      </a>
+      <nav aria-label="Enlaces del pie de página">
+        <ul class="site-footer__links">
+          <li><a href="tienda.html">Tienda</a></li>
+          <li><a href="perifericos.html">Periféricos</a></li>
+          <li><a href="presentacion.html">Presentación</a></li>
+          <li><a href="soporte.html">Soporte</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <p class="site-footer__copy">© 2026 ORBIT PC · Equipo conceptual · Práctica de Diseño de Interfaces</p>
+    </div>
+    <div class="container"><p class="site-footer__copy">Textos e ilustraciones originales de ORBIT PC por José Antonio Núñez Lloret: <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>. Los recursos de terceros conservan sus propias licencias.</p></div>
+  </footer>
+  <script src="js/vendor/bootstrap.bundle.min.js" defer></script>
+  <script src="js/menu.js" defer></script>
+  <script src="js/productos.js" defer></script>
+  <script src="js/pago.js" defer></script>
+</body>
+</html>
+

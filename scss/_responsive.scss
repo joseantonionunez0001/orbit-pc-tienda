@@ -207,7 +207,6 @@
   }
 }
 
-/* En pantallas táctiles no tiene sentido levantar las tarjetas al pasar el ratón */
 @media (hover: none) {
   .product-card:hover {
     transform: none;

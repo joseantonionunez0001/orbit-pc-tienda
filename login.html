@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar sesión · ORBIT PC</title>
+  <meta name="description" content="Inicia sesión en ORBIT PC. Página de demostración para la práctica, sin autenticación real.">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="index.html" aria-label="ORBIT PC, ir al inicio">
+        <img src="img/logo.svg" width="180" height="40" alt="ORBIT PC">
+        <span class="logo__tagline">Tecnología para tu mundo</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="nav-toggle__barras" aria-hidden="true"></span>
+        <span class="sr-only">Abrir menú</span>
+      </button>
+      <nav class="main-nav" id="menu-principal" aria-label="Navegación principal">
+        <ul class="main-nav__list">
+          <li><a class="main-nav__link" href="index.html">Inicio</a></li>
+          <li><a class="main-nav__link" href="tienda.html">Tienda</a></li>
+          <li><a class="main-nav__link" href="perifericos.html">Periféricos</a></li>
+          <li><a class="main-nav__link" href="soporte.html">Soporte</a></li>
+          <li><a class="main-nav__link" href="contacto.html">Contacto</a></li>
+          <li><a class="main-nav__link" href="login.html" aria-current="page">Iniciar sesión</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <header class="container page-intro">
+      <p class="eyebrow">Cuenta</p>
+      <h1 class="page-intro__title">Iniciar sesión</h1>
+      <p class="page-intro__lead">Demostración para la práctica. Usa datos ficticios. Las contraseñas no se guardan en ningún sitio.</p>
+    </header>
+
+    <section class="container auth" aria-label="Acceso a la cuenta">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-5">
+          <div class="card auth__card">
+            <div class="card-body p-4 p-md-5">
+
+              <form id="form-login" class="auth__form" novalidate>
+                <div class="mb-4">
+                  <label for="login-email" class="form-label">Correo electrónico</label>
+                  <input type="email" class="form-control" id="login-email" name="email" placeholder="nombre@correo.com" autocomplete="email" required>
+                  <div class="invalid-feedback">Introduce un correo electrónico válido.</div>
+                </div>
+
+                <div class="mb-4">
+                  <label for="login-password" class="form-label">Contraseña</label>
+                  <input type="password" class="form-control" id="login-password" name="password" autocomplete="current-password" required>
+                  <div class="invalid-feedback">Introduce tu contraseña.</div>
+                </div>
+
+                <div class="form-check mb-4">
+                  <input class="form-check-input" type="checkbox" id="login-recordar" name="recordar">
+                  <label class="form-check-label" for="login-recordar">Recordar sesión en este equipo</label>
+                  <div class="form-text">Si lo marcas, el correo se conserva temporalmente en este navegador hasta que cierres sesión.</div>
+                </div>
+
+                <button class="btn btn--primary btn--lg w-100" type="submit">Iniciar sesión</button>
+
+                <p class="auth__enlace">¿No tienes cuenta? <a class="link-arrow" href="registro.html">Regístrate</a></p>
+              </form>
+
+              <div id="sesion-activa" class="auth__sesion" hidden>
+                <p class="mb-4">Sesión iniciada como <strong id="sesion-email"></strong>.</p>
+                <button class="btn btn--ghost btn--lg w-100" type="button" id="cerrar-sesion">Cerrar sesión</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal fade" id="modal-login" tabindex="-1" aria-labelledby="modal-login-titulo" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="modal-login-titulo">Sesión iniciada</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <p class="mb-0">Has iniciado sesión correctamente en el modo de demostración.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn--primary" data-bs-dismiss="modal">Aceptar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <a class="logo" href="index.html" aria-label="ORBIT PC, ir al inicio">
+        <img src="img/logo.svg" width="180" height="40" alt="ORBIT PC">
+        <span class="logo__tagline">Tecnología para tu mundo</span>
+      </a>
+      <nav aria-label="Enlaces del pie de página">
+        <ul class="site-footer__links">
+          <li><a href="tienda.html">Tienda</a></li>
+          <li><a href="perifericos.html">Periféricos</a></li>
+          <li><a href="presentacion.html">Presentación</a></li>
+          <li><a href="soporte.html">Soporte</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <p class="site-footer__copy">© 2026 ORBIT PC · Equipo conceptual · Práctica de Diseño de Interfaces</p>
+    </div>
+    <div class="container"><p class="site-footer__copy">Textos e ilustraciones originales de ORBIT PC por José Antonio Núñez Lloret: <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>. Los recursos de terceros conservan sus propias licencias.</p></div>
+  </footer>
+  <script src="js/vendor/bootstrap.bundle.min.js" defer></script>
+  <script src="js/menu.js" defer></script>
+  <script src="js/acceso.js" defer></script>
+</body>
+</html>

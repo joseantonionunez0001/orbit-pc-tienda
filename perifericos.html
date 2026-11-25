@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Periféricos · ORBIT PC</title>
+  <meta name="description" content="Ratones y teclados ORBIT PC para completar tu equipo.">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="index.html" aria-label="ORBIT PC, ir al inicio">
+        <img src="img/logo.svg" width="180" height="40" alt="ORBIT PC">
+        <span class="logo__tagline">Tecnología para tu mundo</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="nav-toggle__barras" aria-hidden="true"></span>
+        <span class="sr-only">Abrir menú</span>
+      </button>
+      <nav class="main-nav" id="menu-principal" aria-label="Navegación principal">
+        <ul class="main-nav__list">
+          <li><a class="main-nav__link" href="index.html">Inicio</a></li>
+          <li><a class="main-nav__link" href="tienda.html">Tienda</a></li>
+          <li><a class="main-nav__link" href="perifericos.html" aria-current="page">Periféricos</a></li>
+          <li><a class="main-nav__link" href="soporte.html">Soporte</a></li>
+          <li><a class="main-nav__link" href="contacto.html">Contacto</a></li>
+          <li><a class="main-nav__link" href="login.html">Iniciar sesión</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <header class="container page-intro">
+      <h1 class="page-intro__title">Periféricos</h1>
+      <p class="page-intro__lead">Nueve ratones y nueve teclados para completar tu equipo.</p>
+    </header>
+
+    <section class="container" aria-label="Filtros del listado">
+      <div class="toolbar">
+        <div class="toolbar__filtros" role="group" aria-label="Filtrar por tipo de periférico">
+          <button class="filtro is-active" type="button" data-filtro="todos" aria-pressed="true">Todos</button>
+          <button class="filtro" type="button" data-filtro="raton" aria-pressed="false">Ratones</button>
+          <button class="filtro" type="button" data-filtro="teclado" aria-pressed="false">Teclados</button>
+
+        </div>
+        <label class="toolbar__orden">
+          <span class="toolbar__orden-texto">Ordenar</span>
+          <select class="form-control toolbar__select" id="orden-productos">
+            <option value="destacados">Destacados</option>
+            <option value="precio-asc">Precio: de menor a mayor</option>
+            <option value="precio-desc">Precio: de mayor a menor</option>
+          </select>
+        </label>
+      </div>
+      <p class="toolbar__resultado" id="resultado-filtro" role="status" aria-live="polite">Mostrando 18 de 18 productos</p>
+    </section>
+
+    <section class="container" id="listado" aria-label="Listado de productos">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4" id="listado-productos">
+        <div class="col"><article class="product-card" id="orbit-click-silent" data-categoria="raton" data-precio="24" data-orden="27">
+          <div class="product-card__media">
+            <img src="img/tienda/raton1.webp" alt="">
+          </div>
+          <div class="product-card__body">
+            <p class="eyebrow">Ratón</p>
+            <h2 class="product-card__title"><a class="product-card__link" href="orbit-click-silent.html">ORBIT Click Silent</a></h2>
+            <p class="product-card__text">Clics silenciosos e inalámbrico</p>
+            <ul class="product-card__specs">
+              <li class="chip">Inalámbrico</li>
+              <li class="chip">Clics silenciosos</li>
+              <li class="chip">Batería recargable</li>
+            </ul>
+            <div class="product-card__footer">
+              <p class="product-card__price"><span class="product-card__from">Desde</span>24 €</p>
+            </div>
+          </div>
+        </article></div>
+
+        <div class="col"><article class="product-card" id="orbit-mouse-pro" data-categoria="raton" data-precio="49" data-orden="28">
+          <div class="product-card__media">
+            <img src="img/tienda/raton2.webp" alt="">
+          </div>
+          <div class="product-card__body">
+            <p class="eyebrow">Ratón</p>
+            <h2 class="product-card__title"><a class="product-card__link" href="orbit-mouse-pro.html">ORBIT Mouse Pro</a></h2>
+            <p class="product-card__text">Sensor de alta precisión</p>
+            <ul class="product-card__specs">
+              <li class="chip">Sensor de precisión</li>
+              <li class="chip">6 botones</li>
+              <li class="chip">Ergonómico</li>
+            </ul>
+            <div class="product-card__footer">
+              <p class="product-card__price"><span class="product-card__from">Desde</span>49 €</p>
+            </div>
+          </div>
+        </article></div>
+
+        <div class="col"><article class="product-card" id="orbit-wireless-mini" data-categoria="raton" data-precio="19" data-orden="29">
+          <div class="product-card__media">
+            <img src="img/tienda/raton3.webp" alt="">
+          </div>
+          <div class="product-card__body">
+            <p class="eyebrow">Ratón</p>
+            <h2 class="product-card__title"><a class="product-card__link" href="orbit-wireless-mini.html">ORBIT Wireless Mini</a></h2>
+            <p class="product-card__text">Formato compacto para llevar</p>
+            <ul class="product-card__specs">
+              <li class="chip">Inalámbrico</li>
+              <li class="chip">Compacto</li>
+              <li class="chip">Ligero</li>
+            </ul>
+            <div class="product-card__footer">
+              <p class="product-card__price"><span class="product-card__from">Desde</span>19 €</p>
+            </div>
+          </div>
+        </article></div>
+
+        <div class="col"><article class="product-card" id="orbit-gaming-rgb" data-categoria="raton" data-precio="39" data-orden="30">
+          <div class="product-card__media">
+            <img src="img/tienda/raton4.webp" alt="">
+          </div>
+          <div class="product-card__body">
+            <p class="eyebrow">Ratón</p>
+            <h2 class="product-card__title"><a class="product-card__link" href="orbit-gaming-rgb.html">ORBIT Gaming RGB</a></h2>
+            <p class="product-card__text">Iluminación RGB y DPI ajustable</p>
+            <ul class="product-card__specs">
+              <li class="chip">Iluminación RGB</li>
+              <li class="chip">DPI ajustable</li>
+              <li class="chip">Con cable</li>
+            </ul>
+            <div class="product-card__footer">
+              <p class="product-card__price"><span class="product-card__from">Desde</span>39 €</p>
+            </div>
+          </div>
+        </article></div>
+
+        <div class="col"><article class="product-card" id="orbit-ergo-vertical" data-categoria="raton" data-precio="59" data-orden="31">
+          <div class="product-card__media">
+            <img src="img/tienda/raton5.webp" alt="">
+          </div>
+          <div class="product-card__body">
+            <p class="eyebrow">Ratón</p>
+            <h2 class="product-card__title"><a class="product-card__link" href="orbit-ergo-vertical.html">ORBIT Ergo Vertical</a></h2>
+            <p class="product-card__text">Diseño vertical para reducir tensión</p>
+            <ul class="product-card__specs">
+              <li class="chip">Diseño vertical</li>
+              <li class="chip">Inalámbrico</li>
+              <li class="chip">Confort</li>
+            </ul>
+            <div class="product-card__footer">
+              <p class="product-card__price"><span class="product-card__from">Desde</span>59 €</p>
+            </div>
+          </div>
+        </article></div>
+
+        <div class="col"><article class="product-card" id="orbit-trackball" data-categoria="raton" data-precio="69" data-orden="32">
+          <div class="product-card__media">
+            <img src="img/tienda/raton6.jpg" alt="">
+          </div>
+          <div class="product-card__body">
+            <p class="eyebrow">Ratón</p>
+            <h2 class="product-card__title"><a class="product-card__link" href="orbit-trackball.html">ORBIT Trackball</a></h2>
+            <p class="product-card__text">Control sin mover la mano</p>
+            <ul class="product-card__specs">
+              <li class="chip">Bola de seguimiento</li>
+              <li class="chip">Dos dispositivos</li>
+              <li class="chip">Sin mover la mano</li>
+            </ul>
+            <div class="product-card__footer">
+              <p class="product-card__price"><span class="product-card__from">Desde</span>69 €</p>
+            </div>
+          </div>
+        </article></div>
+
+        <div class="col"><article class="product-card" id="orbit-office-bluetooth" data-categoria="raton" data-precio="22" data-orden="33">
+          <div class="product-card__media">
+            <img src="img/tienda/raton7.webp" alt="">
+          </div>
+          <div class="product-card__body">
+            <p class="eyebrow">Ratón</p>
+            <h2 class="product-card__title"><a class="product-card__link" href="orbit-office-bluetooth.html">ORBIT Office Bluetooth</a></h2>
+            <p class="product-card__text">Conexión Bluetooth para varios equipos</p>
+            <ul class="product-card__specs">
+              <li class="chip">Bluetooth</li>
+              <li class="chip">Multidispositivo</li>
+              <li class="chip">Silencioso</li>
+            </ul>
+            <div class="product-card__footer">
+              <p class="product-card__price"><span class="product-card__from">Desde</span>22 €</p>
+            </div>
+          </div>
+        </article></div>
+
+        <div class="col"><article class="product-card" id="orbit-gaming-pro" data-categoria="raton" data-precio="79" data-orden="34">
+          <div class="product-card__media">
+            <img src="img/tienda/raton8.webp" alt="">
+          </div>
+          <div class="product-card__body">
+            <p class="eyebrow">Ratón</p>
+            <h2 class="product-card__title"><a class="product-card__link" href="orbit-gaming-pro.html">ORBIT Gaming Pro</a></h2>
+            <p class="product-card__text">Sensor óptico avanzado para jugar</p>
+            <ul class="product-card__specs">
+              <li class="chip">Sensor óptico</li>
+              <li class="chip">Peso ajustable</li>
+              <li class="chip">Iluminación RGB</li>
+            </ul>
+            <div class="product-card__footer">
+              <p class="product-card__price"><span class="product-card__from">Desde</span>79 €</p>
+            </div>
+          </div>
+        </article></div>
+
+        <div class="col"><article class="product-card" id="orbit-travel" data-categoria="raton" data-precio="15" data-orden="35">
+          <div class="product-card__media">
+            <img src="img/tienda/raton9.webp" alt="">
+          </div>
+          <div class="product-card__body">
+            <p class="eyebrow">Ratón</p>
+            <h2 class="product-card__title"><a class="product-card__link" href="orbit-travel.html">ORBIT Travel</a></h2>
+            <p class="product-card__text">Muy ligero para viajar</p>
+            <ul class="product-card__specs">
+              <li class="chip">Muy ligero</li>
+              <li class="chip">Con cable</li>
+              <li class="chip">Para viajar</li>
+            </ul>
+            <div class="product-card__footer">
+              <p class="product-card__price"><span class="product-card__from">Desde</span>15 €</p>
+            </div>
+          </div>
+        </article></div>
+
+        <div class="col"><article class="product-card" id="orbit-teclado-mecanico" data-categoria="teclado" data-precio="89" data-orden="36">
+          <div class="product-card__media">
+            <img src="img/tienda/teclado1.jpg" alt="">
+          </div>
+          <div class="product-card__body">
+            <p class="eyebrow">Teclado</p>
+            <h2 class="product-card__title"><a class="product-card__link" href="orbit-teclado-mecanico.html">ORBIT Teclado Mecánico</a></h2>
+            <p class="product-card__text">Switches mecánicos y retroiluminación</p>
+            <ul class="product-card__specs">
+              <li class="chip">Switches mecánicos</li>
+              <li class="chip">Retroiluminado</li>
+              <li class="chip">Teclado completo</li>
+            </ul>
+            <div class="product-card__footer">
+              <p class="product-card__price"><span class="product-card__from">Desde</span>89 €</p>
+            </div>
+          </div>
+        </article></div>
+
+        <div class="col"><article class="product-card" id="orbit-compacto-60" data-categoria="teclado" data-precio="69" data-orden="37">
+          <div class="product-card__media">
+            <img src="img/tienda/teclado2.jpg" alt="">
+          </div>
+          <div class="product-card__body">
+            <p class="eyebrow">Teclado</p>
+            <h2 class="product-card__title"><a class="product-card__link" href="orbit-compacto-60.html">ORBIT Compacto 60%</a></h2>
+            <p class="product-card__text">Formato compacto y mecánico</p>
+            <ul class="product-card__specs">
+              <li class="chip">Formato 60 %</li>
+              <li class="chip">Inalámbrico</li>
+              <li class="chip">Mecánico</li>
+            </ul>
+            <div class="product-card__footer">
+              <p class="product-card__price"><span class="product-card__from">Desde</span>69 €</p>
+            </div>
+          </div>
+        </article></div>
+
+        <div class="col"><article class="product-card" id="orbit-silencioso" data-categoria="teclado" data-precio="29" data-orden="38">
+          <div class="product-card__media">
+            <img src="img/tienda/teclado3.webp" alt="">
+          </div>
+          <div class="product-card__body">
+            <p class="eyebrow">Teclado</p>
+            <h2 class="product-card__title"><a class="product-card__link" href="orbit-silencioso.html">ORBIT Silencioso</a></h2>
+            <p class="product-card__text">Teclado silencioso para la oficina</p>
+            <ul class="product-card__specs">
+              <li class="chip">Silencioso</li>
+              <li class="chip">Con cable</li>
+              <li class="chip">Para oficina</li>
+            </ul>
+            <div class="product-card__footer">
+              <p class="product-card__price"><span class="product-card__from">Desde</span>29 €</p>
+            </div>
+          </div>
+        </article></div>
+
+        <div class="col"><article class="product-card" id="orbit-teclado-inalambrico" data-categoria="teclado" data-precio="39" data-orden="39">
+          <div class="product-card__media">
+            <img src="img/tienda/teclado4.jpg" alt="">
+          </div>
+          <div class="product-card__body">
+            <p class="eyebrow">Teclado</p>
+            <h2 class="product-card__title"><a class="product-card__link" href="orbit-teclado-inalambrico.html">ORBIT Inalámbrico</a></h2>
+            <p class="product-card__text">Batería de larga duración</p>
+            <ul class="product-card__specs">
+              <li class="chip">Inalámbrico</li>
+              <li class="chip">Multidispositivo</li>
+              <li class="chip">Batería larga</li>
+            </ul>
+            <div class="product-card__footer">
+              <p class="product-card__price"><span class="product-card__from">Desde</span>39 €</p>
+            </div>
+          </div>
+        </article></div>
+
+        <div class="col"><article class="product-card" id="orbit-numerico" data-categoria="teclado" data-precio="19" data-orden="40">
+          <div class="product-card__media">
+            <img src="img/tienda/teclado5.jpg" alt="">
+          </div>
+          <div class="product-card__body">
+            <p class="eyebrow">Teclado</p>
+            <h2 class="product-card__title"><a class="product-card__link" href="orbit-numerico.html">ORBIT Numérico</a></h2>
+            <p class="product-card__text">Teclado numérico compacto</p>
+            <ul class="product-card__specs">
+              <li class="chip">Teclado numérico</li>
+              <li class="chip">USB</li>
+              <li class="chip">Compacto</li>
+            </ul>
+            <div class="product-card__footer">
+              <p class="product-card__price"><span class="product-card__from">Desde</span>19 €</p>
+            </div>
+          </div>
+        </article></div>
+
+        <div class="col"><article class="product-card" id="orbit-gaming-rgb-teclado" data-categoria="teclado" data-precio="109" data-orden="41">
+          <div class="product-card__media">
+            <img src="img/tienda/teclado6.webp" alt="">
+          </div>
+          <div class="product-card__body">
+            <p class="eyebrow">Teclado</p>
+            <h2 class="product-card__title"><a class="product-card__link" href="orbit-gaming-rgb-teclado.html">ORBIT Gaming RGB</a></h2>
+            <p class="product-card__text">Iluminación RGB y teclas macro</p>
+            <ul class="product-card__specs">
+              <li class="chip">Iluminación RGB</li>
+              <li class="chip">Teclas macro</li>
+              <li class="chip">Reposamuñecas</li>
+            </ul>
+            <div class="product-card__footer">
+              <p class="product-card__price"><span class="product-card__from">Desde</span>109 €</p>
+            </div>
+          </div>
+        </article></div>
+
+        <div class="col"><article class="product-card" id="orbit-ergonomico" data-categoria="teclado" data-precio="79" data-orden="42">
+          <div class="product-card__media">
+            <img src="img/tienda/teclado7.webp" alt="">
+          </div>
+          <div class="product-card__body">
+            <p class="eyebrow">Teclado</p>
+            <h2 class="product-card__title"><a class="product-card__link" href="orbit-ergonomico.html">ORBIT Ergonómico</a></h2>
+            <p class="product-card__text">Diseño dividido para mayor confort</p>
+            <ul class="product-card__specs">
+              <li class="chip">Diseño dividido</li>
+              <li class="chip">Reposamuñecas</li>
+              <li class="chip">Confort</li>
+            </ul>
+            <div class="product-card__footer">
+              <p class="product-card__price"><span class="product-card__from">Desde</span>79 €</p>
+            </div>
+          </div>
+        </article></div>
+
+        <div class="col"><article class="product-card" id="orbit-retro" data-categoria="teclado" data-precio="59" data-orden="43">
+          <div class="product-card__media">
+            <img src="img/tienda/teclado8.webp" alt="">
+          </div>
+          <div class="product-card__body">
+            <p class="eyebrow">Teclado</p>
+            <h2 class="product-card__title"><a class="product-card__link" href="orbit-retro.html">ORBIT Retro</a></h2>
+            <p class="product-card__text">Estilo retro con teclas redondeadas</p>
+            <ul class="product-card__specs">
+              <li class="chip">Estilo retro</li>
+              <li class="chip">Con cable</li>
+              <li class="chip">Teclas redondeadas</li>
+            </ul>
+            <div class="product-card__footer">
+              <p class="product-card__price"><span class="product-card__from">Desde</span>59 €</p>
+            </div>
+          </div>
+        </article></div>
+
+        <div class="col"><article class="product-card" id="orbit-slim-bluetooth" data-categoria="teclado" data-precio="49" data-orden="44">
+          <div class="product-card__media">
+            <img src="img/tienda/teclado9.webp" alt="">
+          </div>
+          <div class="product-card__body">
+            <p class="eyebrow">Teclado</p>
+            <h2 class="product-card__title"><a class="product-card__link" href="orbit-slim-bluetooth.html">ORBIT Slim Bluetooth</a></h2>
+            <p class="product-card__text">Ultrafino y recargable</p>
+            <ul class="product-card__specs">
+              <li class="chip">Ultrafino</li>
+              <li class="chip">Bluetooth</li>
+              <li class="chip">Recargable</li>
+            </ul>
+            <div class="product-card__footer">
+              <p class="product-card__price"><span class="product-card__from">Desde</span>49 €</p>
+            </div>
+          </div>
+        </article></div>
+      </div>
+    </section>
+
+    
+    <section class="section" aria-label="Ayuda para elegir equipo">
+      <div class="container">
+        <div class="cta-band">
+          <div class="cta-band__text">
+            <h2 class="cta-band__title">¿Necesitas ayuda para decidir?</h2>
+            <p class="cta-band__lead">Te asesoramos sin compromiso según el uso que le vayas a dar.</p>
+          </div>
+          <a class="btn btn--primary btn--lg" href="contacto.html">Contactar</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <a class="logo" href="index.html" aria-label="ORBIT PC, ir al inicio">
+        <img src="img/logo.svg" width="180" height="40" alt="ORBIT PC">
+        <span class="logo__tagline">Tecnología para tu mundo</span>
+      </a>
+      <nav aria-label="Enlaces del pie de página">
+        <ul class="site-footer__links">
+          <li><a href="tienda.html">Tienda</a></li>
+          <li><a href="perifericos.html">Periféricos</a></li>
+          <li><a href="presentacion.html">Presentación</a></li>
+          <li><a href="soporte.html">Soporte</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <p class="site-footer__copy">© 2026 ORBIT PC · Equipo conceptual · Práctica de Diseño de Interfaces</p>
+    </div>
+    <div class="container"><p class="site-footer__copy">Textos e ilustraciones originales de ORBIT PC por José Antonio Núñez Lloret: <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>. Los recursos de terceros conservan sus propias licencias.</p></div>
+  </footer>
+  <script src="js/menu.js" defer></script>
+  <script src="js/tienda.js" defer></script>
+</body>
+</html>
