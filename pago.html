@@ -120,7 +120,10 @@
                 </div>
                 <div class="checkout__fila">
                   <dt><label for="pago-cantidad">Cantidad</label></dt>
-                  <dd><input type="number" class="form-control checkout__cantidad" id="pago-cantidad" name="cantidad" form="form-pago" min="1" max="10" step="1" value="1" required></dd>
+                  <dd>
+                    <input type="number" class="form-control checkout__cantidad" id="pago-cantidad" name="cantidad" form="form-pago" min="1" max="10" step="1" value="1" required>
+                    <div class="invalid-feedback">Elige una cantidad entre 1 y 10.</div>
+                  </dd>
                 </div>
                 <div class="checkout__fila">
                   <dt>Gastos de envío</dt>

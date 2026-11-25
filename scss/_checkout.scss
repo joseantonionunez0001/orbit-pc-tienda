@@ -59,5 +59,19 @@
 .checkout__cantidad {
   width: 6rem;
   min-height: 44px;
+  margin-left: auto;
   text-align: center;
+}
+
+// Bootstrap pondría su icono de error encima de las flechas del campo numérico.
+// Lo quitamos: el borde rojo y el mensaje ya avisan.
+.checkout__cantidad.is-invalid {
+  padding-right: 1rem;
+  background-image: none;
+}
+
+// El mensaje va bajo el campo y se alinea con él.
+.checkout__cantidad ~ .invalid-feedback {
+  font-weight: 400;
+  text-align: right;
 }

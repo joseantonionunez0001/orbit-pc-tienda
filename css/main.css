@@ -9942,7 +9942,18 @@ video {
 .checkout__cantidad {
   width: 6rem;
   min-height: 44px;
+  margin-left: auto;
   text-align: center;
+}
+
+.checkout__cantidad.is-invalid {
+  padding-right: 1rem;
+  background-image: none;
+}
+
+.checkout__cantidad ~ .invalid-feedback {
+  font-weight: 400;
+  text-align: right;
 }
 
 @media (max-width: 960px) {

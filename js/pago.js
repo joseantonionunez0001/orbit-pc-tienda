@@ -36,9 +36,19 @@ if (!producto) {
     total.textContent = euros(producto.precio * cantidadValida());
   }
 
-  campoCantidad.addEventListener("input", actualizarTotal);
+  // El campo de cantidad está fuera del <form> (usa el atributo form), así que
+  // .was-validated no le llega. Por eso marcamos el error a mano con is-invalid.
+  function marcarCantidad() {
+    campoCantidad.classList.toggle("is-invalid", !campoCantidad.checkValidity());
+  }
+
+  campoCantidad.addEventListener("input", () => {
+    marcarCantidad();
+    actualizarTotal();
+  });
   campoCantidad.addEventListener("change", () => {
     campoCantidad.value = cantidadValida();
+    marcarCantidad();
     actualizarTotal();
   });
   actualizarTotal();
@@ -46,6 +56,7 @@ if (!producto) {
   formulario.addEventListener("submit", (evento) => {
     evento.preventDefault();
     formulario.classList.add("was-validated");
+    marcarCantidad();
     if (!formulario.checkValidity()) return;
 
     bootstrap.Modal.getOrCreateInstance(document.getElementById("modal-compra")).show();

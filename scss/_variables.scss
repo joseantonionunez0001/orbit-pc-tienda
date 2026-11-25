@@ -34,13 +34,13 @@ $container-max: 1200px;
 $container-max-xxl: 1320px;
 $header-height: 88px;
 
-$primary: $color-accent;
-$body-bg: $color-bg;
-$body-color: $color-text;
+$primary: $color-accent;       // Verde: #0b8f74
+$body-bg: $color-bg;           // Blanco: #ffffff
+$body-color: $color-text;      // Texto: #0f172a
 $link-color: $color-accent;
-$font-family-base: $font-base;
+$font-family-base: $font-base; // Inter
 $headings-font-weight: 800;
-$border-radius: $radius-sm;
+$border-radius: $radius-sm;    // 8px
 $enable-shadows: false;
 $container-padding-x: 1.25rem;
 $container-max-widths: (
